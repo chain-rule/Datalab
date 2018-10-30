@@ -1,5 +1,7 @@
 # Datalab
 
+The repository provides scripts for building and using a custom [Datalab] image.
+
 ## Usage
 
 Build a custom Datalab image and upload it to Container Registry:
@@ -37,3 +39,5 @@ Delete the instance:
 ```bash
 make delete
 ```
+
+[datalab]: https://cloud.google.com/datalab
