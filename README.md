@@ -4,6 +4,12 @@ The repository provides scripts for building and using a custom [Datalab] image.
 
 ## Usage
 
+Adjust the configuration:
+
+```bash
+vim config.mk
+```
+
 Build a custom Datalab image and upload it to Container Registry:
 
 ```bash

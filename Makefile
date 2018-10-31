@@ -1,31 +1,25 @@
-ifndef project
+include config.mk
+
+ifeq ($(project),)
 $(error The project variable must be defined)
 endif
 
-name ?= workhorse
-user ?= ${USER}
-
-hub ?= eu.gcr.io
-machine ?= n1-standard-8
-zone ?= europe-west4-a
-
-image := ${name}
-instance := ${name}-$(shell echo '${user}' | tr '[:upper:]. ' '[:lower:]--')
+instance := ${image}-$(shell echo '${user}' | tr '[:upper:]. ' '[:lower:]--')
 
 all: connect
 
 build:
 	docker rmi ${image} || true
 	docker build --tag ${image} .
-	docker tag ${image} ${hub}/${project}/${image}
-	docker push ${hub}/${project}/${image}
+	docker tag ${image} ${registry}/${project}/${image}
+	docker push ${registry}/${project}/${image}
 
 connect:
 	datalab connect ${instance}
 
 create:
 	datalab create \
-		--image-name ${hub}/${project}/${image} \
+		--image-name ${registry}/${project}/${image} \
 		--machine-type ${machine} \
 		--no-backups \
 		--zone ${zone} \
