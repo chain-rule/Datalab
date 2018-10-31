@@ -1,9 +1,5 @@
 include config.mk
 
-ifeq ($(project),)
-$(error The project variable must be defined)
-endif
-
 instance := ${image}-$(shell echo '${user}' | tr '[:upper:]. ' '[:lower:]--')
 
 all: connect
