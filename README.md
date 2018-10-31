@@ -7,7 +7,7 @@ The repository provides scripts for building and using a custom [Datalab] image.
 Adjust the configuration:
 
 ```bash
-vim config.mk
+vim requirements.txt setup.mk setup.sh startup.sh
 ```
 
 Build a custom Datalab image and upload it to Container Registry:

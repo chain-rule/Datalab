@@ -1,4 +1,4 @@
-include config.mk
+include setup.mk
 
 instance := ${image}-$(shell echo '${user}' | tr '[:upper:]. ' '[:lower:]--')
 
