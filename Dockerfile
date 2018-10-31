@@ -9,5 +9,5 @@ RUN source activate py3env && pip install --upgrade --requirement /tmp/requireme
 
 WORKDIR /content/datalab
 
-COPY startup.sh /startup.sh
-ENTRYPOINT ["/startup.sh"]
+COPY run.sh /run.sh
+ENTRYPOINT ["/run.sh"]
