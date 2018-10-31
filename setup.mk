@@ -1,4 +1,4 @@
-image ?= workhorse
+image ?= datalab
 machine ?= n1-standard-8
 project ?= $(shell gcloud config get-value project)
 registry ?= eu.gcr.io
