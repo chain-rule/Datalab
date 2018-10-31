@@ -1,6 +1,6 @@
 include setup.mk
 
-all: connect
+all: start
 
 include run.mk
 
