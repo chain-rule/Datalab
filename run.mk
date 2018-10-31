@@ -1,5 +1,3 @@
-instance := ${image}-$(shell echo '${user}' | tr '[:upper:]. ' '[:lower:]--')
-
 build:
 	docker rmi ${image} || true
 	docker build --tag ${image} .

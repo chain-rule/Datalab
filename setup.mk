@@ -1,8 +1,9 @@
 project ?= $(shell gcloud config get-value project)
-user ?= ${USER}
+user ?= $(shell echo '${USER}' | tr '[:upper:]. ' '[:lower:]--')
 
-image ?= datalab
+image ?= datalab-${user}
 registry ?= eu.gcr.io
 
+instance ?= ${image}
 machine ?= n1-standard-8
 zone ?= europe-west4-a
