@@ -2,7 +2,7 @@
 
 The repository provides scripts for building and using a custom [Datalab] image.
 
-## Usage
+## Installation
 
 Adjust the configuration:
 
@@ -15,6 +15,8 @@ Build a custom Datalab image and upload it to Container Registry:
 ```bash
 make build
 ```
+
+## Usage
 
 Create an instance in Compute Engine and connect to Datalab:
 
