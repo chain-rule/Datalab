@@ -6,9 +6,6 @@ build:
 	docker tag ${image} ${registry}/${project}/${image}
 	docker push ${registry}/${project}/${image}
 
-connect:
-	datalab connect ${instance}
-
 create:
 	datalab create \
 		--image-name ${registry}/${project}/${image} \
@@ -32,7 +29,10 @@ ssh:
 			$$(docker ps | grep ${image} | cut -d" " -f1) \
 			script /dev/null'
 
+start:
+	datalab connect ${instance}
+
 stop:
 	datalab stop ${instance}
 
-.PHONY: build connect create delete ssh stop
+.PHONY: build create delete ssh start stop
