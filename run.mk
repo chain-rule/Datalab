@@ -18,7 +18,7 @@ delete:
 		--quiet \
 		${instance}
 
-ssh:
+shell:
 	gcloud compute ssh \
 		${instance} -- ' \
 		docker exec \
@@ -33,4 +33,4 @@ start:
 stop:
 	datalab stop ${instance}
 
-.PHONY: build create delete ssh start stop
+.PHONY: build create delete shell start stop
