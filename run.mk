@@ -20,6 +20,7 @@ delete:
 
 shell:
 	gcloud compute ssh \
+		--zone ${zone} \
 		${instance} -- ' \
 		docker exec \
 			--interactive \
