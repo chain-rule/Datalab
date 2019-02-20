@@ -19,7 +19,7 @@ delete:
 		${instance}
 
 shell:
-	gcloud compute ssh \
+	@gcloud compute ssh \
 		--zone ${zone} \
 		${instance} -- ' \
 		docker exec \
@@ -29,9 +29,9 @@ shell:
 			script /dev/null'
 
 start:
-	datalab connect ${instance}
+	@datalab connect ${instance}
 
 stop:
-	datalab stop ${instance}
+	@datalab stop ${instance}
 
 .PHONY: build create delete shell start stop
