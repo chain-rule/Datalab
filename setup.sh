@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update
-apt-get install -y htop tmux vim
+apt-get install -y htop psmisc tmux vim
 
 rm -rf /usr/local/envs/py2env/lib/python2.7/site-packages/dill*
 rm -rf /usr/local/envs/py2env/lib/python2.7/site-packages/seaborn*
