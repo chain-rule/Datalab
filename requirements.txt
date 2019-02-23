@@ -1,5 +1,9 @@
+datalab
 matplotlib
+numpy
 pandas
+scikit-learn
+scipy
 seaborn
 tensorflow
 yapf
