@@ -1,4 +1,4 @@
-FROM gcr.io/cloud-datalab/datalab:latest
+FROM gcr.io/cloud-datalab/datalab:latest_test
 
 COPY setup.sh /tmp/setup.sh
 RUN source /tmp/setup.sh
