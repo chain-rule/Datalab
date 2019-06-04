@@ -10,7 +10,7 @@ fi
 
 if [ ! -d ~/.ssh ]; then
   mkdir ~/.ssh
-  ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
+  ssh-keygen -t ed25519 -N '' -f ~/.ssh/id_ed25519
 fi
 
 rm -rf /root/.ssh
