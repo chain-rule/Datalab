@@ -16,10 +16,9 @@ fi
 rm -rf /root/.ssh
 ln -s ~/.ssh /root/.ssh
 
-if [ ! -f ~/.bashrc ]; then
-  echo 'source activate py3env' >> ~/.bashrc
-  echo 'source ~/.development/bashrc' >> ~/.bashrc
-  echo 'export TERM=screen-256color-bce' >> ~/.bashrc
+if [ ! -f ~/.zshrc ]; then
+  echo 'source activate py3env' >> ~/.zshrc
+  echo 'source ~/.development/zshrc' >> ~/.zshrc
 fi
 
 if [ ! -f ~/.config/matplotlib/matplotlibrc ]; then

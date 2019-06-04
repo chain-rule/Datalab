@@ -26,7 +26,7 @@ shell:
 			--interactive \
 			--tty \
 			$$(docker ps | grep ${image} | cut -d" " -f1) \
-			script /dev/null'
+			zsh'
 
 start:
 	@datalab connect ${instance}
