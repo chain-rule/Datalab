@@ -10,6 +10,7 @@ ln -s ~/.ssh /root/.ssh
 
 if [ ! -f ~/.zshrc ]; then
   echo "emulate bash -c 'source activate py3env'" >> ~/.zshrc
+  echo 'TERM=xterm-256color' >> ~/.zshrc
 fi
 
 if [ ! -d ~/.development ]; then
