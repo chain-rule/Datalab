@@ -12,6 +12,10 @@ if [ ! -f ~/.zshrc ]; then
   echo "emulate bash -c 'source activate py3env'" >> ~/.zshrc
 fi
 
+if [ ! -f ~/.zshenv ]; then
+  echo 'DEBIAN_PREVENT_KEYBOARD_CHANGES=yes' >> ~/.zshenv
+fi
+
 if [ ! -d ~/.development ]; then
   git clone https://github.com/IvanUkhov/.development.git ~/.development && make -C ~/.development
 fi
