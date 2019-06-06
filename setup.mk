@@ -6,4 +6,4 @@ registry ?= eu.gcr.io
 
 instance ?= ${image}
 machine ?= n1-standard-8
-zone ?= europe-west4-a
+zone ?= europe-west1-b
