@@ -2,6 +2,8 @@ datalab
 matplotlib
 numpy
 pandas
+pylint
+pytest
 scikit-learn
 scipy
 seaborn
