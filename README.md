@@ -6,13 +6,13 @@ The repository provides scripts for building and using a custom [Datalab] image.
 
 Adjust the configuration:
 
-```bash
+```sh
 vim Dockerfile Makefile requirements.txt run.sh
 ```
 
 Build a custom Datalab image and upload it to Container Registry:
 
-```bash
+```sh
 make build
 ```
 
@@ -20,31 +20,31 @@ make build
 
 Create an instance in Compute Engine and connect to Datalab:
 
-```bash
+```sh
 make create
 ```
 
 Stop the instance:
 
-```bash
+```sh
 make stop
 ```
 
 Connect to Datalab, resuming the instance if needed:
 
-```bash
+```sh
 make connect
 ```
 
 Connect to the instance via SSH:
 
-```bash
-make ssh
+```sh
+make shell
 ```
 
 Delete the instance:
 
-```bash
+```sh
 make delete
 ```
 
